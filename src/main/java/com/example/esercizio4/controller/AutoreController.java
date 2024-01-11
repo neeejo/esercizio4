@@ -14,7 +14,7 @@ public class AutoreController {
     AutoreService autoreService;
 
     @GetMapping("/read")
-    public Autore getById(@RequestParam int id) {
+    public Autore read(@RequestParam int id) {
         return autoreService.read(id);
     }
     @GetMapping("/findAll")
