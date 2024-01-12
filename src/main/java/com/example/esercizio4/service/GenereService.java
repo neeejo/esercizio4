@@ -16,7 +16,7 @@ public class GenereService {
     public List<Genere> getALl() {return genereDAO.getALl();}
     public Genere insert(Genere genere) {
         List<Genere> lista = genereDAO.getALl();
-        genere.setId(lista.stream().mapToInt(Genere::getId).max().orElseThrow()+1);
+        genere.setId((!lista.isEmpty()) ? lista.stream().mapToInt(Genere::getId).max().orElseThrow() + 1 : 0);
         return genereDAO.create(genere);
     }
     public boolean update(Genere genere) {return genereDAO.update(genere);}

@@ -20,7 +20,7 @@ public class AutoreService {
     }
     public Autore insert(Autore autore) {
         List<Autore> lista = autoreDAO.getAll();
-        autore.setId(lista.stream().mapToInt(Autore::getId).max().orElseThrow() + 1);
+        autore.setId((!lista.isEmpty()) ? lista.stream().mapToInt(Autore::getId).max().orElseThrow() + 1 : 0);
         return autoreDAO.create(autore);
     }
     public boolean update(Autore autore) {
