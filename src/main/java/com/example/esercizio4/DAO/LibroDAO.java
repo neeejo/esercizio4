@@ -10,4 +10,5 @@ List<Libro> getAll();
 boolean delete(int id);
 boolean update(Libro libro);
 boolean create(Libro libro);
+List<Libro> libriPerGenere(int id);
 }

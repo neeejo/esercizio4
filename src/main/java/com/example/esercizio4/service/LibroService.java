@@ -21,4 +21,5 @@ public class LibroService {
     }
     public boolean update(Libro libro) {return libroDAO.update(libro);}
     public boolean delete(int id) {return libroDAO.delete(id);}
+    public List<Libro> libroPerGenere(int id) {return libroDAO.libriPerGenere(id);}
 }

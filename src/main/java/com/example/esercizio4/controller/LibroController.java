@@ -22,4 +22,6 @@ public class LibroController {
     public boolean update(@RequestBody Libro libro) {return libroService.update(libro);}
     @DeleteMapping("/delete")
     public boolean delete(@RequestParam int id) {return libroService.delete(id);}
+    @GetMapping("/libropergenere")
+    public List<Libro> libriPerGenere(@RequestParam int id) {return libroService.libroPerGenere(id);}
 }
