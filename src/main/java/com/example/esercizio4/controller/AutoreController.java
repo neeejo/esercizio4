@@ -22,7 +22,7 @@ public class AutoreController {
         return autoreService.getAll();
     }
     @PostMapping("/insert")
-    public boolean insert(@RequestBody Autore autore) {
+    public Autore insert(@RequestBody Autore autore) {
         return autoreService.insert(autore);
     }
     @PutMapping("/update")

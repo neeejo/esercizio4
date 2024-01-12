@@ -45,8 +45,9 @@ public class LibroAutoreDAOImpl implements LibroAutoreDAO{
     }
 
     @Override
-    public boolean create(LibroAutore libroAutore) {
-        return jdbcTemplate.update(SQL_INSERT_LIBROAUTORE, libroAutore.getIdAutore(), libroAutore.getIdLibro())>0;
+    public LibroAutore create(LibroAutore libroAutore) {
+        jdbcTemplate.update(SQL_INSERT_LIBROAUTORE, libroAutore.getIdAutore(), libroAutore.getIdLibro());
+        return libroAutore;
     }
 
 

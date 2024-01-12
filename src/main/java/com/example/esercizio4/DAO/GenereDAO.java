@@ -9,5 +9,5 @@ public interface GenereDAO {
     List<Genere> getALl();
     boolean delete(int id);
     boolean update(Genere genere);
-    boolean create(Genere genere);
+    Genere create(Genere genere);
 }

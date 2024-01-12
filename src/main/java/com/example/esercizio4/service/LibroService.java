@@ -14,7 +14,7 @@ public class LibroService {
 
     public Libro read(int id) {return libroDAO.read(id);}
     public List<Libro> getAll() {return libroDAO.getAll();}
-    public boolean insert(Libro libro) {
+    public Libro insert(Libro libro) {
         List<Libro> lista = libroDAO.getAll();
         libro.setId(lista.stream().mapToInt(Libro::getId).max().orElseThrow() + 1);
         return libroDAO.create(libro);

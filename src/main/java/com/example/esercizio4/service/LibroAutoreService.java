@@ -19,7 +19,7 @@ public class LibroAutoreService {
     public LibroAutore read(int id) {return libroAutoreDAO.read(id);}
 
     public List<LibroAutore> getAll() {return libroAutoreDAO.getAll();}
-    public boolean insert(LibroAutore libroAutore) {return libroAutoreDAO.create(libroAutore);}
+    public LibroAutore insert(LibroAutore libroAutore) {return libroAutoreDAO.create(libroAutore);}
     public boolean update(LibroAutore libroAutore) {return libroAutoreDAO.update(libroAutore);}
     public boolean delete(int id) {return libroAutoreDAO.delete(id);}
     public List<LibroAndLibroAutore> getAllByAuthor(int id) {return libroAndLibroAutoreDAO.getAllByAuthor(id);}

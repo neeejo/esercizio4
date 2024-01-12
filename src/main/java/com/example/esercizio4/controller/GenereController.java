@@ -18,7 +18,7 @@ public class GenereController {
     @GetMapping("/findAll")
     public List<Genere> getAll() {return genereService.getALl();}
     @PostMapping("/insert")
-    public boolean insert(@RequestBody Genere genere) {return genereService.insert(genere);}
+    public Genere insert(@RequestBody Genere genere) {return genereService.insert(genere);}
     @PutMapping("/update")
     public boolean update(@RequestBody Genere genere) {return genereService.update(genere);}
     @DeleteMapping("/delete")

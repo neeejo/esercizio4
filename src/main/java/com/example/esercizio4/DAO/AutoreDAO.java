@@ -12,6 +12,6 @@ public interface AutoreDAO {
     boolean delete(int id);
     boolean update(Autore autore);
 
-    boolean create(Autore autore);
+    Autore create(Autore autore);
 
 }

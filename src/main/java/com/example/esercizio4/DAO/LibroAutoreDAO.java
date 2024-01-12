@@ -9,5 +9,5 @@ public interface LibroAutoreDAO {
     List<LibroAutore> getAll();
     boolean delete(int id);
     boolean update(LibroAutore libroAutore);
-    boolean create(LibroAutore libroAutore);
+    LibroAutore create(LibroAutore libroAutore);
 }

@@ -19,7 +19,7 @@ public class LibroAutoreController {
     @GetMapping("/findAll")
     public List<LibroAutore> getAll() {return libroAutoreService.getAll();}
     @PostMapping("/insert")
-    public boolean insert(@RequestBody LibroAutore libroAutore) {return libroAutoreService.insert(libroAutore);}
+    public LibroAutore insert(@RequestBody LibroAutore libroAutore) {return libroAutoreService.insert(libroAutore);}
     @PutMapping("/update")
     public boolean update(@RequestBody LibroAutore libroAutore) {return libroAutoreService.update(libroAutore);}
     @DeleteMapping("/delete")

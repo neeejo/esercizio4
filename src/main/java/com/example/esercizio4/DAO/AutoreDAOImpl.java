@@ -42,7 +42,8 @@ public class AutoreDAOImpl implements AutoreDAO{
     }
 
     @Override
-    public boolean create(Autore autore) {
-        return jdbcTemplate.update(SQL_INSERT_AUTORE, autore.getId(), autore.getNome(), autore.getCognome(), autore.getAnnoDiNascita())>0;
+    public Autore create(Autore autore) {
+        jdbcTemplate.update(SQL_INSERT_AUTORE, autore.getId(), autore.getNome(), autore.getCognome(), autore.getAnnoDiNascita());
+        return autore;
     }
 }

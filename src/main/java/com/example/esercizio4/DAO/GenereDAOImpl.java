@@ -42,7 +42,8 @@ public class GenereDAOImpl implements GenereDAO{
     }
 
     @Override
-    public boolean create(Genere genere) {
-        return jdbcTemplate.update(SQL_INSERT_GENERE, genere.getId(),genere.getDescrizione())>0;
+    public Genere create(Genere genere) {
+        jdbcTemplate.update(SQL_INSERT_GENERE, genere.getId(),genere.getDescrizione());
+        return genere;
     }
 }

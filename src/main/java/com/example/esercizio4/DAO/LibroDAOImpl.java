@@ -40,8 +40,9 @@ public class LibroDAOImpl implements LibroDAO{
     }
 
     @Override
-    public boolean create(Libro libro) {
-        return jdbcTemplate.update(SQL_INSERT_LIBRO, libro.getId(), libro.getTitolo(), libro.getNumeroPagine(), libro.getAnnoDiPubblicazione(), libro.getIdGenere())>0;
+    public Libro create(Libro libro) {
+        jdbcTemplate.update(SQL_INSERT_LIBRO, libro.getId(), libro.getTitolo(), libro.getNumeroPagine(), libro.getAnnoDiPubblicazione(), libro.getIdGenere());
+        return libro;
     }
 
     @Override

@@ -17,7 +17,7 @@ public class LibroController {
     @GetMapping("/findAll")
     public List<Libro> getAll() {return libroService.getAll();}
     @PostMapping("/insert")
-    public boolean insert(@RequestBody Libro libro) {return libroService.insert(libro);}
+    public Libro insert(@RequestBody Libro libro) {return libroService.insert(libro);}
     @PutMapping("/update")
     public boolean update(@RequestBody Libro libro) {return libroService.update(libro);}
     @DeleteMapping("/delete")

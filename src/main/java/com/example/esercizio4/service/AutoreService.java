@@ -18,7 +18,7 @@ public class AutoreService {
     public List<Autore> getAll() {
         return autoreDAO.getAll();
     }
-    public boolean insert(Autore autore) {
+    public Autore insert(Autore autore) {
         List<Autore> lista = autoreDAO.getAll();
         autore.setId(lista.stream().mapToInt(Autore::getId).max().orElseThrow() + 1);
         return autoreDAO.create(autore);
